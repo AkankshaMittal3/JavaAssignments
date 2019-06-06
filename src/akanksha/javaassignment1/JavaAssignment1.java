@@ -8,8 +8,8 @@ package akanksha.javaassignment1;
  */
 
 
-import java.util.Scanner;
 import java.io.File;
+import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class JavaAssignment1 {
@@ -32,19 +32,23 @@ public class JavaAssignment1 {
 
         //list all files in the directory
         File[] files = directory.listFiles();
-        if (files == null)
+        if (files == null) {
             return;
+        }
+
 
         for (File file : files) {
             if (file.isFile()) {
 
-                if (regexPattern.matcher(file.getName()).find())
+                if (regexPattern.matcher(file.getName()).find()) {
                     System.out.println(file.getName() + " " + file.getAbsolutePath());
+                }
             }
 
             //Search in the subdirectory
-            else if (file.isDirectory())
+            else if (file.isDirectory()) {
                 searchFiles(pattern, file.getAbsolutePath());
+            }
         }
 
     }
