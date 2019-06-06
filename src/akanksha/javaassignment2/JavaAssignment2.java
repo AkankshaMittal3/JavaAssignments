@@ -11,11 +11,13 @@ import java.util.Scanner;
 public class JavaAssignment2 {
     /**
      * This method checks whether the input string contains all letters or not
+     * Time complexity O(n)
+     * Space complexity O(1)
      *
      * @param input this is the string entered by user
      */
 
-    public static void checkPanagram(String input) {
+    public static void checkPangram(String input) {
         //if length of sting is less than 26
         //then it can not contain all 26 letters
         if (input.length() < 26) {
@@ -66,6 +68,6 @@ public class JavaAssignment2 {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter ");
         String input = scan.nextLine();
-        checkPanagram(input);
+        checkPangram(input);
     }
 }
