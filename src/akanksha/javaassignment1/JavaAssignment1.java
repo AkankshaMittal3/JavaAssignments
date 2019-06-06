@@ -21,6 +21,31 @@ public class JavaAssignment1 {
      * @param pattern this is regex pattern to be matched with file names.
      */
     public static void searchFiles(String dir, String pattern) {
+        File directory = new File(dir);
+        final Pattern regexPattern;
+        try {
+            regexPattern = Pattern.compile(pattern);
+        } catch (Exception e) {
+            System.out.println("Invalid Java Regex");
+            return;
+        }
+
+        //list all files in the directory
+        File[] files = directory.listFiles();
+        if (files == null)
+            return;
+
+        for (File file : files) {
+            if (file.isFile()) {
+
+                if (regexPattern.matcher(file.getName()).find())
+                    System.out.println(file.getName() + " " + file.getAbsolutePath());
+            }
+
+            //Search in the subdirectory
+            else if (file.isDirectory())
+                searchFiles(pattern, file.getAbsolutePath());
+        }
 
     }
 
