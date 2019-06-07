@@ -2,13 +2,18 @@ package akanksha.javaincrementalassignment3;
 
 abstract class Rodents {
 
+    //Superclass constructor
     public Rodents() {
         System.out.println("Rodents class");
     }
 
+
+    //test method to check which class we are in
     public void test() {
         System.out.println("Rodents method");
     }
+
+    //abstract common methods for subclasses
 
     abstract void eat();
 
@@ -16,10 +21,13 @@ abstract class Rodents {
 }
 
 class Gerbil extends Rodents {
+
+    //default constructor
     public Gerbil() {
         System.out.println("Gerbil class");
     }
 
+    //test method to check which class we are in
     public void test() {
         System.out.println("Gerbil method");
     }
@@ -38,10 +46,12 @@ class Gerbil extends Rodents {
 
 class Hamster extends Rodents {
 
+    //default constructor
     public Hamster() {
         System.out.println("Hamster class");
     }
 
+    //test method to check which class we are in
     public void test() {
         System.out.println("Hamster method");
     }
