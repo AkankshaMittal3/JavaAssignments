@@ -57,6 +57,25 @@ class CycleFactory {
 public class JavaIncrementalAssignment3part4 {
 
     public static void main(String[] args){
-        
+        CycleFactory cycleFactory = new CycleFactory();
+
+        //get an object of UniCycle and call its test method.
+        Cycle cycle1 = cycleFactory.getCycle(1);
+
+        //call test method of Circle
+        cycle1.test();
+
+        //get an object of Bicycle and call its test method.
+        Cycle cycle2 = cycleFactory.getCycle(2);
+
+        //call test method of Bicycle
+        cycle2.test();
+
+        //get an object of Tricycle and call its test method.
+        Cycle cycle3 = cycleFactory.getCycle(3);
+
+        //call test method of Tricycle
+        cycle3.test();
+
     }
 }
