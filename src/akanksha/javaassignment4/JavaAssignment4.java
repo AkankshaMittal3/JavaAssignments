@@ -8,13 +8,12 @@ import java.util.Scanner;
 
 
 public class JavaAssignment4 {
-    public static void kyc(String signUp, String curr)
-    {
+    public static void kyc(String signUp, String curr) {
         Date signUpDate = new Date();
         Date currDate = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-        try{
-             signUpDate= sdf.parse(signUp);
+        try {
+            signUpDate = sdf.parse(signUp);
             currDate = sdf.parse(curr);
         } catch (ParseException e) {
             System.out.println("invalid date");
@@ -38,7 +37,7 @@ public class JavaAssignment4 {
         Calendar anniversaryCal = Calendar.getInstance();
         anniversaryCal.setTime(first);
 
-        anniversaryCal.set(Calendar.YEAR, signUpYear+1);
+        anniversaryCal.set(Calendar.YEAR, signUpYear + 1);
 
         //computing range
         if (currDate.compareTo(last) < 0 && currDate.compareTo(first) > 0) {
@@ -52,11 +51,9 @@ public class JavaAssignment4 {
             last = null;
         }
 
-        if(first == null && last == null)
-        {
+        if (first == null && last == null) {
             System.out.println("No range");
-        }
-        else
+        } else
             System.out.println(sdf.format(first) + " " + sdf.format(last));
 
 
@@ -68,11 +65,10 @@ public class JavaAssignment4 {
         System.out.println("Enter the no. of forms you want");
         int forms = scan.nextInt();
         System.out.println("Enter signup and curr date in this format: dd-mm-yy dd-mm-yy");
-        while(forms-- != 0)
-        {
+        while (forms-- != 0) {
             String signUp = scan.next();
             String curr = scan.next();
             kyc(signUp, curr);
         }
-}
+    }
 }
