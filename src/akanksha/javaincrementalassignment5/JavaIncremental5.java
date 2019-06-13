@@ -11,21 +11,17 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class JavaIncremental5 {
-    public static void check(String str)
-    {
+    public static void check(String str) {
         Boolean check = Pattern.matches("^[A-Z].*[.]$", str);
-        if(check)
-        {
+        if (check) {
             System.out.println("valid");
-        }
-        else
-        {
+        } else {
             System.out.println("Invalid");
         }
     }
-    public static void main(String[] a)
-    {
-        Scanner  scan = new Scanner(System.in);
+
+    public static void main(String[] a) {
+        Scanner scan = new Scanner(System.in);
         String str = scan.nextLine();
         check(str);
     }
